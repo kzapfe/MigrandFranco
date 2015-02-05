@@ -2,10 +2,10 @@ program leyendobinarios01
   !! Programa que lee un archivo binario escrito en mono/csharp y devuelve lo que lee.
   !! parece funcionar a lo bruto.
   
-  USE, INTRINSIC :: ISO_C_BINDING, ONLY: C_INT
+  !!USE, INTRINSIC :: ISO_C_BINDING, ONLY: C_INT !!Creo que esto NO es necesario
   INTEGER, PARAMETER :: chaira = 10
   CHARACTER(*), PARAMETER :: filename = 'datos_binarios.bin'
-  INTEGER(C_INT) :: data
+  !!INTEGER(C_INT) :: data
   Integer*1 :: probando
   !***
   OPEN(unit=chaira,file=filename, ACCESS='STREAM', FORM='UNFORMATTED')
