@@ -1,8 +1,8 @@
 /*Programa que mezcla los intervalos de los tiempos de disparo */
 
 
-#include <gsl/gsl_rng.h>
-#include <gsl/gsl_randist.h>
+//#include <gsl/gsl_rng.h>
+//#include <gsl/gsl_randist.h>
 #include <iostream>
 #include <fstream>
 #include <armadillo>
@@ -40,16 +40,20 @@ int main(int argc, char *argv[]){
   /*inicializar variables del generador aleatoreo */
 
   vec randomInterval=shuffle(intervalos);
+  vec randomFireTimes=cumsum(randomInterval);
 
-  cout<<sum(randomInterval)+tiempos(0)<<endl;
   
-  const gsl_rng_type *T;
+  
+
+
+  
+  /*  const gsl_rng_type *T;
   gsl_rng *r;
   T=gsl_rng_ranlxs2;
   r=gsl_rng_alloc(T);
   gsl_rng_env_setup();
   gsl_rng_set(r,283712);
-
+  */
   
 
   

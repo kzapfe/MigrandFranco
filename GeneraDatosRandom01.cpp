@@ -24,14 +24,15 @@ int main(int argc, char *argv[]){
   T=gsl_rng_ranlxs2;
   r=gsl_rng_alloc(T);
   gsl_rng_env_setup();
-  gsl_rng_set(r,283712);
+  gsl_rng_set(r,2837);
 
-
+  int tent;
   
   double tau=0;
   for(int j=1;j<=cantidad; j++){
-    tau+=gsl_ran_rayleigh(r, 0.5);
-    cout<<tau<<endl;
+    tau+=gsl_ran_rayleigh(r, 100);
+    tent=(int)floor(4*tau);
+    cout<<tent<<endl;
   }
   
   
