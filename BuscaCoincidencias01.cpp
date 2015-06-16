@@ -48,11 +48,11 @@ int main(int argc, char *argv[]){
 	{
 	coincidencias++;
 	lastk=k+1;
-	cout<<TiemposCA(k)-TiemposGD(j)<<endl;
+	/*	cout<<TiemposCA(k)-TiemposGD(j)<<endl;
 	cout<<"Hubo una coincidencia para el dispero GD : "<< j <<endl;
 	cout<<"Con el CA "<< lastk<<endl;
 	cout<<"vamos a checar otro tiempo "<<endl;
-	
+	*/
 	
 	break;}
     }
@@ -60,7 +60,8 @@ int main(int argc, char *argv[]){
    
   }
 
-  cout<<"Hubo " << coincidencias <<" coincidencias aceptables. "<<endl;
+  //cout<<"Hubo " << coincidencias <<" coincidencias aceptables. "<<endl;
+  cout<< coincidencias<<"\t"<<TiemposGD.n_rows<<"\t"<<TiemposCA.n_rows<<endl;
     
   return 0;
 
