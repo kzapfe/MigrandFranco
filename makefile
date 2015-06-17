@@ -10,3 +10,7 @@ Busca01.x: BuscaCoincidencias01.cpp
 GeneraDatos.x: GeneraDatosRandom01.cpp
 	g++ -lm -lgsl $< -o $@
 
+
+MezclayCoincide.x: MezclayCoincide01.cpp 
+	g++ $(LIBS1) $< -o $@
+
