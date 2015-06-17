@@ -29,11 +29,11 @@ int main(int argc, char *argv[]){
   /*
     vamos a suponer que la frecuencia de muestreo
     es de 7022 Hz 
-    Asi que una "coincidencia tiene 50 ms para suceder,
-    es decir, 351 cuadros (350 pa no moler). 
+    Asi que una "coincidencia tiene 5 ms para suceder,
+    es decir, 35.1 cuadros (35 pa no moler). 
   */
 
-  const int ventanaCausal=350;
+  const int ventanaCausal=35;
 
   int coincidencias=0;
   int lastk=0;

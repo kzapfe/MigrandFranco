@@ -29,8 +29,8 @@ int main(int argc, char *argv[]){
   TiemposCA.load(nomdatosCA);
   
 
-  const int ventanaCausal=350;
-  const int nmax=100;
+  const int ventanaCausal=35;
+  const int nmax=1000;
 
   int coincidencias=0;
   int lastk=0;
@@ -105,13 +105,14 @@ int main(int argc, char *argv[]){
     }
 
     //cout<<"Hubo " << coincidencias <<" coincidencias aceptables. "<<endl;
-    cout<< coincidencias<<"\t"<<TiemposGD.n_rows<<"\t"<<TiemposCA.n_rows<<endl;
+
     coincidenciastotales+=coincidencias;
     
   }
   promcoincidencias=(double)coincidenciastotales/(double)nmax;
 
-  cout<<"en promedio hubo disparios causales "<<promcoincidencias<<endl;
+  // cout<<"en promedio hubo disparios causales "<<promcoincidencias<<endl;
+  cout<< promcoincidencias<<"\t"<<TiemposGD.n_rows<<"\t"<<TiemposCA.n_rows<<endl;
   
   return 0;
   
