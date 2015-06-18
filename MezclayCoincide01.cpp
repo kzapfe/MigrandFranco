@@ -30,7 +30,8 @@ int main(int argc, char *argv[]){
   
 
   const int ventanaCausal=35;
-  const int nmax=1000;
+  int nmax;
+
 
   int coincidencias=0;
   int lastk=0;
@@ -59,8 +60,22 @@ int main(int argc, char *argv[]){
   
   ostringstream escupenumero;
   string lastring;
+
+  //No tiene sentido mezclarlo 1000 veces si no hay mil permutaciones.
+  /*  int permutaciones;
+  permutaciones=(int)floor(tgamma(GDintervalos.n_rows+1)*tgamma(CAintervalos.n_rows+1));
+
   
-  
+  cout<<tgamma(GDintervalos.n_rows+1)<<endl;
+  cout<<tgamma(CAintervalos.n_rows+1)<<endl;
+  cout<<GDintervalos.n_rows<<endl;
+  cout<<CAintervalos.n_rows<<endl;
+
+  nmax=min(1000, permutaciones);
+  cout<<nmax<<"\t"<<permutaciones<<endl;
+  */
+  nmax=1000;
+
   for(int n=1; n<=nmax; n++){
 
     
