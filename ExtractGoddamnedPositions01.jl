@@ -11,4 +11,11 @@ function limpiaarraystring(x::String)
     result=int(parse(x).args)
     return result
 end
+
+
+function limpiaarraystringfloat2(x::String)
+    result=float(parse(x).args[2:end])
+    return result
+end
     
+
